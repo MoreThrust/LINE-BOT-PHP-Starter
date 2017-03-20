@@ -23,15 +23,23 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['messages'][0]['packageId'] = "1";
   $arrPostData['messages'][0]['stickerId'] = "1";
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3/1');
-  $arrPostData['messages'][0]['text'] = "เปิดไฟเรียบร้อย";
-}else{
+}else if($arrJson['events'][0]['message']['text'] == "off"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
+  $arrPostData['messages'][0]['type'] = "template";
+  $arrPostData['messages'][0]['template'] = "1";
+  $arrPostData['messages'][0]['type'] = "confirm";
+  $arrPostData['messages'][0]['text'] = "Are you sure?";
+  $arrPostData['messages'][0]['actions'] = "message";
+  $arrPostData['messages'][0]['label'] = "Yes";
+  $arrPostData['messages'][0]['text'] = "yes";
+  $arrPostData['messages'][0]['type'] = "message";
+  $arrPostData['messages'][0]['label'] = "No";
+  $arrPostData['messages'][0]['text'] = "no";
 }
  
  
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
 curl_setopt($ch, CURLOPT_HEADER, false);
