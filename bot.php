@@ -20,10 +20,22 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "template";
-  $arrPostData['messages'][0]['template'] = 
-  		$arrPostData['type'][0]['confirm'],
-  		$arrPostData['text'][0]['Are you sure?']
-  		;
+  $arrPostData['messages'][0]['template'] = "{";
+  $arrPostData['messages'][0]['type'] = "confirm"
+  $arrPostData['messages'][0]['text'] = "Are you sure?";
+  $arrPostData['messages'][0]['actions'] = "
+  		[
+  			{
+            	"type": "message",
+            	"label": "Yes",
+            	"text": "yes"
+          	},
+          	{
+            	"type": "message",
+            	"label": "No",
+            	"text": "no"
+          }
+      ]}"
   
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
   $arrPostData = array();
