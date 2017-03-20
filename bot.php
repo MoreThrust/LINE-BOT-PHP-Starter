@@ -41,19 +41,10 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่ปิดอยู่";
   }
   if($request1 && $request2 == '{"result":"true","value":"1"}'){
-  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่";
-  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนเล็กเปิดอยู่";
-  }else{
-  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนเล็กปิดอยู่";
-  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่ปิดอยู่";
+  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่\nไฟห้องนอนเล็กเปิดอยู่";
   }
   if($request1 && $request2 && $request3 == '{"result":"true","value":"1"}'){
-  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่";
-  	$arrPostData['messages'][0]['text'] = "ไฟห้องรับแขกเปิดอยู่";
-  }else{
-  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่ปิดอยู่";
-  	$arrPostData['messages'][0]['text'] = "ไฟห้องรับแขกปิดอยู่";
-
+  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่\nไฟห้องรับแขกเปิดอยู่";
   }
 }
 $ch = curl_init();
