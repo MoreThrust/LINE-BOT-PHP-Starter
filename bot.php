@@ -37,14 +37,12 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $request3 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3');
   if($request1 == '{"result":"true","value":"1"}'){
   	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่";
-  }else{
-  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่ปิดอยู่";
   }
   if($request1 && $request2 == '{"result":"true","value":"1"}'){
   	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่\nไฟห้องนอนเล็กเปิดอยู่";
   }
   if($request1 && $request2 && $request3 == '{"result":"true","value":"1"}'){
-  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่\nไฟห้องรับแขกเปิดอยู่";
+  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่\nไฟห้องรับแขกเปิดอยู่\nไฟห้องรับแขกเปิดอยู่";
   }
 }
 $ch = curl_init();
