@@ -35,7 +35,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $request1 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1');
   $request2 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp2');
   $request3 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3');
-  $arrPostData['messages'][0]['text'] = $request1\n$request2\n$request3;
+  $arrPostData['messages'][0]['text'] = $request1;
 }
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
