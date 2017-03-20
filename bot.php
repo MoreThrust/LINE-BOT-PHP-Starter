@@ -20,15 +20,13 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "รอสักครู่.... 0x100077";
+  $arrPostData['messages'][0]['text'] = "0x100077";
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3/1');
-  $arrPostData['messages'][0]['text'] = "เปิดไฟแล้วม.";
 }else if($arrJson['events'][0]['message']['text'] == "off"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "sticker";
-  $arrPostData['messages'][0]['packageId'] = "1";
-  $arrPostData['messages'][0]['stickerId'] = "0x100077";
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "เปิด\nไฟ\nแล้ว";
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3/0');
 }
  
