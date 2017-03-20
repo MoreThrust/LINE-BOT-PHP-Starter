@@ -19,17 +19,9 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
 }else if($arrJson['events'][0]['message']['text'] == "on"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "template";
-  $arrPostData['messages'][0]['template'] = "{";
-  $arrPostData['messages'][0]['type'] = "confirm"
-  $arrPostData['messages'][0]['text'] = "Are you sure?";
-  $arrPostData['messages'][0]['actions'] = "[{"type": "message","label": "Yes","text": "yes"},{"type": "message","label": "No","text": "no"}]}"
-  
-}else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
+  $arrPostData['messages'][0]['type'] = "sticker";
+  $arrPostData['messages'][0]['packageId'] = "1";
+  $arrPostData['messages'][0]['stickerId'] = "1";
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3/1');
 }else{
   $arrPostData = array();
