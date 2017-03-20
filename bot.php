@@ -22,7 +22,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "รอสักครู่.... 0x100077";
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3/1');
-  $arrPostData['messages'][0]['text'] = "เปิดไฟแล้วม."0x100077;
+  $arrPostData['messages'][0]['text'] = "เปิดไฟแล้วม.";
 }else if($arrJson['events'][0]['message']['text'] == "off"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
