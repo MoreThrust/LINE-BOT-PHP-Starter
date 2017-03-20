@@ -20,14 +20,16 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "sticker";
-  $arrPostData['messages'][0]['packageId'] = "1";
+  $arrPostData['messages'][0]['packageId'] = "0x100077";
   $arrPostData['messages'][0]['stickerId'] = "1";
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3/1');
 }else if($arrJson['events'][0]['message']['text'] == "off"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "template";
-  $arrPostData['messages'][0]['template'] = {$arrPostData['messages'][0]['type'] = "confirm",$arrPostData['messages'][0]['text'] = "Are you sure?",$arrPostData['messages'][0]['actions'] = [$arrPostData['messages'][0]['type'] = "message", $arrPostData['messages'][0]['label'] = "No", $arrPostData['messages'][0]['text'] = "no"]};
+  $arrPostData['messages'][0]['type'] = "sticker";
+  $arrPostData['messages'][0]['packageId'] = "1";
+  $arrPostData['messages'][0]['stickerId'] = "0x100077";
+  $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3/0');
 }
  
  
