@@ -23,19 +23,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['messages'][0]['template'] = "{";
   $arrPostData['messages'][0]['type'] = "confirm"
   $arrPostData['messages'][0]['text'] = "Are you sure?";
-  $arrPostData['messages'][0]['actions'] = "
-  		[
-  			{
-            	"type": "message",
-            	"label": "Yes",
-            	"text": "yes"
-          	},
-          	{
-            	"type": "message",
-            	"label": "No",
-            	"text": "no"
-          }
-      ]}"
+  $arrPostData['messages'][0]['actions'] = "[{"type": "message","label": "Yes","text": "yes"},{"type": "message","label": "No","text": "no"}]}"
   
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
   $arrPostData = array();
