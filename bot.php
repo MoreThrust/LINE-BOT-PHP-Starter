@@ -40,6 +40,16 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   }else{
   	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่ปิดอยู่";
   }
+  if($request2 == '{"result":"true","value":"1"}'){
+  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนเล็กเปิดอยู่";
+  }else{
+  	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนเล็กปิดอยู่";
+  }
+  if($request3 == '{"result":"true","value":"1"}'){
+  	$arrPostData['messages'][0]['text'] = "ไฟห้องรับแขกเปิดอยู่";
+  }else{
+  	$arrPostData['messages'][0]['text'] = "ไฟห้องรับแขกปิดอยู่";
+  }
 }
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
