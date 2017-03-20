@@ -38,10 +38,10 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   if($request1 == '{"result":"true","value":"1"}'){
   	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่";
   }
-  if($request1 && $request2 == '{"result":"true","value":"1"}'){
+  if($request1 and $request2 == '{"result":"true","value":"1"}'){
   	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่\nไฟห้องนอนเล็กเปิดอยู่";
   }
-  if($request1 && $request2 && $request3 == '{"result":"true","value":"1"}'){
+  if($request1 and $request2 and $request3 == '{"result":"true","value":"1"}'){
   	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่\nไฟห้องรับแขกเปิดอยู่\nไฟห้องรับแขกเปิดอยู่";
   }
 }
