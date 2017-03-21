@@ -41,6 +41,27 @@ if (!is_null($events['events'])) {
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
 
+        if ($event['message']['text'] == "สัส") {
+			$replyToken = $event['replyToken'];
+
+            $messages = ["type" => "location","title" => "มึงไปเล่นตรงนี้นะ","address" => "โรงพยาบาลศรีธัญญา","latitude" => 13.845162,"longitude" => 100.517254];
+			$url = 'https://api.line.me/v2/bot/message/reply';
+			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+		}
+
+        if ($event['message']['text'] == "ควย") {
+			$replyToken = $event['replyToken'];
+
+			$messages = ["type" => "image","originalContentUrl" => "https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=0ahUKEwiE2MPS_ebSAhWBLo8KHXTEANoQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1fCrqWIQ19A&psig=AFQjCNHxu1VCN5i07g-757NNbe873scdGA&ust=1490164541165635","previewImageUrl" => "https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=0ahUKEwiE2MPS_ebSAhWBLo8KHXTEANoQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1fCrqWIQ19A&psig=AFQjCNHxu1VCN5i07g-757NNbe873scdGA&ust=1490164541165635"];
+
+			$url = 'https://api.line.me/v2/bot/message/reply';
+			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+		}
+
         if ($event['message']['text'] == "chk") {
 			$replyToken = $event['replyToken'];
 
@@ -89,7 +110,7 @@ if (!is_null($events['events'])) {
             $status += $Air2;
             $status += $Air3;
 
-			$messages = ["type" => "location","title" => "มึงไฟเล่นนี่นะ","address" => "โรงพยาบาลศรีธัญญา","latitude" => 13.845162,"longitude" => 100.517254];
+			$messages = ["type" => "location","title" => "มึงไปเล่นตรงนี้นะ","address" => "โรงพยาบาลศรีธัญญา","latitude" => 13.845162,"longitude" => 100.517254];
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($data);
