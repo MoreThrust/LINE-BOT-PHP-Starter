@@ -113,20 +113,8 @@ if (!is_null($events['events'])) {
             $status += $Air2;
             $status += $Air3;
 
-			$messages = [
+			$messages = ["type" => "template","template" => ["type" => "confirm","text" => "Are you sure?"]];
 
-                    "type" => "template",
-                    "altText" => "this is a confirm template",
-                    "template" => "",
-                    "type" => "confirm",
-                    "text" => "Are you sure?",
-                    "actions"=> "",
-                        "type" => "message",
-                        "label" => "Yes",
-                        "text" => "yes"
-                
-
-            ];
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($data);
