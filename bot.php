@@ -91,10 +91,11 @@ if (!is_null($events['events'])) {
                 $Air3 = "แอร์ห้องรับแขก: ปิดอยู่";
             }
             
+            $status = $Lamp1+$Lamp2+$Lamp3+$Air1+$Air2+$Air3;
 
 			$messages = [
 				'type' => 'text',
-				'text' => $Lamp1,$Lamp2,$Lamp3,$Air1,$Air2,$Air3
+				'text' => $status
 			];
 
 
