@@ -54,7 +54,7 @@ if (!is_null($events['events'])) {
         if ($event['message']['text'] == "ควย") {
 			$replyToken = $event['replyToken'];
 
-			$messages = ["type" => "image","originalContentUrl" => "https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=0ahUKEwiE2MPS_ebSAhWBLo8KHXTEANoQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1fCrqWIQ19A&psig=AFQjCNHxu1VCN5i07g-757NNbe873scdGA&ust=1490164541165635","previewImageUrl" => "https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=0ahUKEwiE2MPS_ebSAhWBLo8KHXTEANoQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1fCrqWIQ19A&psig=AFQjCNHxu1VCN5i07g-757NNbe873scdGA&ust=1490164541165635"];
+			$messages = ["type" => "image","originalContentUrl" => "http://www.bloggang.com/data/kunpae/picture/1195109535.jpg","previewImageUrl" => "http://www.bloggang.com/data/kunpae/picture/1195109535.jpg"];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
