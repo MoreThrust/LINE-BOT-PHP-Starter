@@ -20,8 +20,9 @@ if (!is_null($events['events'])) {
         if ($event['message']['text'] == "เปิดไฟห้องนอนใหญ่") {
 			$replyToken = $event['replyToken'];
 
-            $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/1');
             $messages = ['type' => 'text','text' => "เปิดไฟห้องนอนใหญ่แล้ว"];
+
+            $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/1');
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$message2],];
 			$post = json_encode($data);
@@ -31,10 +32,7 @@ if (!is_null($events['events'])) {
         if ($event['message']['text'] == "ปิดไฟห้องนอนใหญ่") {
 			$replyToken = $event['replyToken'];
 
-			$messages = [
-				'type' => 'text',
-				'text' => "ปิดไฟห้องนอนใหญ่แล้ว"
-			];
+			$messages = ['type' => 'text','text' => "ปิดไฟห้องนอนใหญ่แล้ว"];
 
             $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/0');
 			$url = 'https://api.line.me/v2/bot/message/reply';
@@ -84,7 +82,12 @@ if (!is_null($events['events'])) {
                 $Air3 = "แอร์ห้องรับแขก: ปิดอยู่";
             }
             
-            $status = ($Lamp1+$Lamp2+$Lamp3+$Air1+$Air2+$Air3);
+            $status = $Lamp1;
+            $status += $Lamp2;
+            $status += $Lamp3;
+            $status += $Air1;
+            $status += $Air2;
+            $status += $Air3;
 
 			$messages = [
 				'type' => 'text',
