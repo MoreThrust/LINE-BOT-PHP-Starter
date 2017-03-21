@@ -89,13 +89,7 @@ if (!is_null($events['events'])) {
             $status += $Air2;
             $status += $Air3;
 
-			$messages = [
-				'type' => 'text',
-				'text' => $Air1,
-                'type' => 'text',
-				'text' => $Air2
-			];
-
+			$messages = ["type" => "sticker","packageId" => "1","stickerId" => "1"];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
