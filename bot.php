@@ -54,14 +54,14 @@ if (!is_null($events['events'])) {
         if ($event['message']['text'] == "ควย") {
 			$replyToken = $event['replyToken'];
 
-			$messages = ["type" => "image","originalContentUrl" => "http://www.bloggang.com/data/kunpae/picture/1195109535.jpg","previewImageUrl" => "http://www.bloggang.com/data/kunpae/picture/1195109535.jpg"];
+			$messages = ["type" => "image","originalContentUrl" => "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Tiger_Temple_Water_Buffalo.jpg/250px-Tiger_Temple_Water_Buffalo.jpg","previewImageUrl" => "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Tiger_Temple_Water_Buffalo.jpg/250px-Tiger_Temple_Water_Buffalo.jpg"];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-            $messages = ["type" => "image","originalContentUrl" => "http://www.bloggang.com/data/kunpae/picture/1195109535.jpg","previewImageUrl" => "http://www.bloggang.com/data/kunpae/picture/1195109535.jpg"];
+            $messages = ["type" => "image","originalContentUrl" => "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Tiger_Temple_Water_Buffalo.jpg/250px-Tiger_Temple_Water_Buffalo.jpg","previewImageUrl" => "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Tiger_Temple_Water_Buffalo.jpg/250px-Tiger_Temple_Water_Buffalo.jpg"];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
