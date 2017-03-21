@@ -33,7 +33,19 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			$messages = ['type' => 'text','text' => "ปิดไฟห้องนอนใหญ่แล้ว"];
+            $count == 1;
+            $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/0');
+			$url = 'https://api.line.me/v2/bot/message/reply';
+			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+		}
 
+        if ($count == 1) {
+			$replyToken = $event['replyToken'];
+
+			$messages = ['type' => 'text','text' => "Ok"];
+            $count == 0;
             $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/0');
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
@@ -130,4 +142,4 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 	}
 }
-echo $txtSt;
+echo "Ok";
