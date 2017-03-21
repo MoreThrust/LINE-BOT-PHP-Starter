@@ -42,9 +42,9 @@ if (!is_null($events['events'])) {
 				'text' => "ok"
 			];
             $messages2 = [
-				"type": "sticker",
-                "packageId": "1",
-                "stickerId": "1"
+				"type" => "sticker",
+                "packageId" => "1",
+                "stickerId" => "1"
 			];
             $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/0');
 			$url = 'https://api.line.me/v2/bot/message/reply';
