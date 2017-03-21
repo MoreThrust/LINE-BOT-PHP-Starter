@@ -6,12 +6,14 @@ $events = json_decode($content, true);
 if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 
-		if ($event['message']['text'] == "Hi" or "hi" or "Hello" or "hello" or "Hey" or "hey" or "MT" or "mt" or "สวัสดี" or "ไง" or "เฮ้" or "โย่" or "เฮ้ย") {
+		if ($event['message']['text'] == ("Hi" or "hey" or "MT" or "ไง" or "เฮ้" or "โย่")) {
 			$replyToken = $event['replyToken'];
 
 			$messages = [
 				'type' => 'text',
-				'text' => "ว่าไง"
+				'text' => "ว่าไง",
+                'type' => 'text',
+				'text' => "มีอะไรให้ช่วยเอ่ย"
 			];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
