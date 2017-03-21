@@ -41,11 +41,16 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => "ok"
 			];
+            $messages2 = [
+				"type": "sticker",
+                "packageId": "1",
+                "stickerId": "1"
+			];
             $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/0');
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'messages' => [$messages,$messages2],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
