@@ -58,13 +58,10 @@ if (!is_null($events['events'])) {
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
             $messagesK = ['type' => 'text','text' => "ปิดไฟห้องนอนใหญ่แล้ว"];
-			$url = 'https://api.line.me/v2/bot/message/reply';
 			$dataK = ['replyToken' => $replyToken,'messages' => [$messagesK],];
-			$postK = json_encode($dataK);
+			$post = json_encode($date,$dataK);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
 
