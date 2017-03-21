@@ -68,17 +68,20 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'template',
                 'altText' => 'this is a confirm template',
-                'template' => "{
+                'template' => {
                     'type' => 'confirm',
                     'text' => 'Are you sure?',
                     'actions' => [{
                         'type' => 'message',
-                        'label' => 'Yes','text' => 'yes'
+                        'label' => 'Yes',
+                        'text' => 'yes'
                         },
                         {
                         'type' => 'message',
-                        'label' => 'No','text' => 'no'}
-                        ]}"
+                        'label' => 'No',
+                        'text' => 'no'
+                        }
+                        ]}
 			];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
