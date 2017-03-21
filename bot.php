@@ -91,7 +91,7 @@ if (!is_null($events['events'])) {
 
 			$messages = [
 				'type' => 'text',
-				'text' => $status
+				'text' => $Air2
 			];
 
 
