@@ -54,16 +54,47 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
             $requestL1 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1');
+            $requestL2 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp2');
+            $requestL3 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3');
+            $requestA1 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air1');
+            $requestA2 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air2');
+            $requestA3 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air3');
+            
             if($requestL1 == '{"result":"true","value":"1"}'){
                 $Lamp1 = "ไฟห้องนอนใหญ่: เปิดอยู่";
             }else{
                 $Lamp1 = "ไฟห้องนอนใหญ่: ปิดอยู่";
             }
-
+            if($requestL2 == '{"result":"true","value":"1"}'){
+                $Lamp2 = "ไฟห้องนอนเล็ก: เปิดอยู่";
+            }else{
+                $Lamp2 = "ไฟห้องนอนเล็ก: ปิดอยู่";
+            }
+            if($requestL3 == '{"result":"true","value":"1"}'){
+                $Lamp3 = "ไฟห้องรับแขก: เปิดอยู่";
+            }else{
+                $Lamp3 = "ไฟห้องรับแขก: ปิดอยู่";
+            }
+            if($requestA1 == '{"result":"true","value":"1"}'){
+                $Air1 = "แอร์ห้องนอนใหญ่: เปิดอยู่";
+            }else{
+                $Air1 = "แอร์ห้องนอนใหญ่: ปิดอยู่";
+            }
+            if($requestA2 == '{"result":"true","value":"1"}'){
+                $Air2 = "แอร์ห้องนอนเล็ก: เปิดอยู่";
+            }else{
+                $Air2 = "แอร์ห้องนอนเล็ก: ปิดอยู่";
+            }
+            if($requestA3 == '{"result":"true","value":"1"}'){
+                $Air3 = "แอร์ห้องรับแขก: เปิดอยู่";
+            }else{
+                $Air3 = "แอร์ห้องรับแขก: ปิดอยู่";
+            }
+            
 
 			$messages = [
 				'type' => 'text',
-				'text' => $Lamp1
+				'text' => $Lamp1/n,$Lamp2/n,$Lamp3/n,$Air1/n,$Air2/n,$Air3
 			];
 
 
