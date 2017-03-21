@@ -38,7 +38,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			$messages = [
-				'type' => 'text/sticker',
+				'type' => 'text,sticker',
 				'text' => "ok",
                 "packageId" => "1",
                 "stickerId" => "1"
