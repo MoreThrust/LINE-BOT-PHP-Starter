@@ -60,6 +60,13 @@ if (!is_null($events['events'])) {
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+
+            $messages = ["type" => "image","originalContentUrl" => "http://www.bloggang.com/data/kunpae/picture/1195109535.jpg","previewImageUrl" => "http://www.bloggang.com/data/kunpae/picture/1195109535.jpg"];
+
+			$url = 'https://api.line.me/v2/bot/message/reply';
+			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
 
         if ($event['message']['text'] == "chk") {
