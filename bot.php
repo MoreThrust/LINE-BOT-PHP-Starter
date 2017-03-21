@@ -53,16 +53,20 @@ if (!is_null($events['events'])) {
         if ($event['message']['text'] == "chk") {
 			$replyToken = $event['replyToken'];
 
+            $requestL1 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1');
+            if($requestL1 == '{"result":"true","value":"1"}'){
+                $Lamp1 = "ไฟห้องนอนใหญ่: เปิดอยู่";
+            }else{
+                $Lamp1 = "ไฟห้องนอนใหญ่: ปิดอยู่";
+            }
+
+
 			$messages = [
 				'type' => 'text',
 				'text' => $Lamp1
 			];
 
-            if($requestL1 == '{"result":"true","value":"1"}'){
-                $Lamp1 = "ไฟห้องนอนใหญ่: เปิดอยู่";
-            }
 
-            $requestL1 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1');
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($data);
