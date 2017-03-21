@@ -24,7 +24,7 @@ if (!is_null($events['events'])) {
 
             $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/1');
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = ['replyToken' => $replyToken,'messages' => [$message2],];
+			$data = ['replyToken' => $replyToken,'messages' => [$message],];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
@@ -113,7 +113,7 @@ if (!is_null($events['events'])) {
 			$messages = ['type' => 'text','text' => $txtSt];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
+			$data = ['replyToken' => $replyToken,'messages' => [$messages]];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
