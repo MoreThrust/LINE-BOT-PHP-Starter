@@ -20,13 +20,15 @@ if (!is_null($events['events'])) {
         if ($event['message']['text'] == "เปิดไฟห้องนอนใหญ่") {
 			$replyToken = $event['replyToken'];
 
-			$messages = ['type' => 'text','text' => "รอสักครู่"];
+			$messages1 = ['type' => 'text','text' => "รอสักครู่"];
+            $data1 = ['replyToken' => $replyToken,'messages' => [$messages1],];
+			$post1 = json_encode($data1);
 
             $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/1');
-            $messages = ['type' => 'text','text' => "เปิดไฟห้องนอนใหญ่แล้ว"];
+            $messages2 = ['type' => 'text','text' => "เปิดไฟห้องนอนใหญ่แล้ว"];
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
-			$post = json_encode($data);
+			$data2 = ['replyToken' => $replyToken,'messages' => [$messages2],];
+			$post2 = json_encode($data2);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
 
