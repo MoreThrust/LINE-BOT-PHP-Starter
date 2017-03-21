@@ -94,7 +94,7 @@ if (!is_null($events['events'])) {
 
 			$messages = [
 				'type' => 'text',
-				'text' => $Lamp1/n,$Lamp2/n,$Lamp3/n,$Air1/n,$Air2/n,$Air3
+				'text' => $Lamp1,$Lamp2,$Lamp3,$Air1,$Air2,$Air3
 			];
 
 
