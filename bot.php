@@ -12,7 +12,7 @@ if (!is_null($events['events'])) {
 			$messages = ['type' => 'text','text' => "ว่าไง มีอะไรให้ช่วยเอ่ย??"];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = ['replyToken' => $replyToken,'messages' => [$messages]];
+			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
@@ -24,10 +24,10 @@ if (!is_null($events['events'])) {
 
             $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/1');
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = ['replyToken' => $replyToken,'messages' => [$message]];
+			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-		}
+        }
 
         if ($event['message']['text'] == "ปิดไฟห้องนอนใหญ่") {
 			$replyToken = $event['replyToken'];
@@ -36,7 +36,7 @@ if (!is_null($events['events'])) {
 
             $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/0');
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = ['replyToken' => $replyToken,'messages' => [$messages]];
+			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
@@ -46,7 +46,7 @@ if (!is_null($events['events'])) {
 
             $messages = ["type" => "location","title" => "มึงไปเล่นตรงนู้นนะ","address" => "โรงพยาบาลศรีธัญญา","latitude" => 13.845162,"longitude" => 100.517254];
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = ['replyToken' => $replyToken,'messages' => [$messages]];
+			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
@@ -57,7 +57,7 @@ if (!is_null($events['events'])) {
 			$messages = ["type" => "image","originalContentUrl" => "http://www.bloggang.com/data/kunpae/picture/1195109535.jpg","previewImageUrl" => "httpd=&cad=rja&uact=com%2Fwatch%3Fv%3D1fCrqWIQ19A&psig=AFQjCNHxu1VCN5i07g-757NNbe873scdGA&ust=1490164541165635"];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = ['replyToken' => $replyToken,'messages' => [$messages]];
+			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($date,$dataK);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
@@ -113,7 +113,7 @@ if (!is_null($events['events'])) {
 			$messages = ['type' => 'text','text' => $txtSt];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = ['replyToken' => $replyToken,'messages' => [$messages]];
+			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
@@ -130,4 +130,4 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 	}
 }
-echo "OK";
+echo $txtSt;
