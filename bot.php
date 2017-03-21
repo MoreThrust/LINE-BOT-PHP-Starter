@@ -41,7 +41,7 @@ if (!is_null($events['events'])) {
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		}
 
-        if ($event['message']['text'] == "ปิดไฟห้องนอนใหญ่แล้ว") {
+        if ($messages == "ปิดไฟห้องนอนใหญ่แล้ว") {
 			$replyToken = $event['replyToken'];
 
 			$messages = ["type" => "sticker","packageId" => "1","stickerId" => "407"];
