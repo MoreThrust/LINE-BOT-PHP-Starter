@@ -44,7 +44,7 @@ if (!is_null($events['events'])) {
         if ($event['message']['text'] == "สัส") {
 			$replyToken = $event['replyToken'];
 
-            $messages = ["type" => "location","title" => "มึงไปเล่นตรงนี้นะ","address" => "โรงพยาบาลศรีธัญญา","latitude" => 13.845162,"longitude" => 100.517254];
+            $messages = ["type" => "location","title" => "มึงไปเล่นตรงนู้นนะ","address" => "โรงพยาบาลศรีธัญญา","latitude" => 13.845162,"longitude" => 100.517254];
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
 			$post = json_encode($data);
@@ -110,7 +110,7 @@ if (!is_null($events['events'])) {
             $status += $Air2;
             $status += $Air3;
 
-			$messages = ["type" => "template","template" => ["type" => "confirm","text" => "Are you sure?"]];
+			$messages = ["type" => "template","template" => ["type" => "confirm","text" => "Are you sure?","actions" => [["type" => "message","label" => "Yes","text" => "yes"],["type" => "message","label" => "No","text" => "no"]]]];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
