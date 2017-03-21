@@ -10,10 +10,14 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			$messages = [
-				'type' => 'text',
-				'text' => "ว่าไง",
-                'type' => 'text',
-				'text' => "มีอะไรให้ช่วยเอ่ย"
+				{
+            "type":"text",
+            "text":"Hello, user"
+        },
+        {
+            "type":"text",
+            "text":"May I help you?"
+        }
 			];
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
