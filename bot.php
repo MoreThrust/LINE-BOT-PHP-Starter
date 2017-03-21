@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
         if ($event['message']['text'] == "เปิดไฟห้องนอนใหญ่") {
 			$replyToken = $event['replyToken'];
 
-            $messages = ['type' => 'text','text' => "เปิดไฟห้องนอนใหญ่แล้ว"];
+            $messages = ['type' => 'text','text' => "เปิดไฟห้องนอนใหญ่แล้ว","ขอบคุณครับ"];
 
             $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/1');
 			$url = 'https://api.line.me/v2/bot/message/reply';
