@@ -91,6 +91,8 @@ if (!is_null($events['events'])) {
 
 			$messages = [
 				'type' => 'text',
+				'text' => $Air1,
+                'type' => 'text',
 				'text' => $Air2
 			];
 
