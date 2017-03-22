@@ -29,7 +29,79 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ปิดไฟห้องนอนใหญ่แล้ว";
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/0');
-}else if($arrJson['events'][0]['message']['text'] == "เช็คสถานะไฟฟ้า"){
+}
+
+else if($arrJson['events'][0]['message']['text'] == "เปิดไฟห้องนอนเล็ก"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "เปิดไฟห้องนอนเล็กแล้ว";
+  $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp2/1');
+}else if($arrJson['events'][0]['message']['text'] == "ปิดไฟห้องนอนเล็ก"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ปิดไฟห้องนอนเล็กแล้ว";
+  $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp2/0');
+}
+
+else if($arrJson['events'][0]['message']['text'] == "เปิดไฟห้องรับแขก"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "เปิดไฟห้องรับแขกแล้ว";
+  $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3/1');
+}else if($arrJson['events'][0]['message']['text'] == "ปิดไฟห้องรับแขก"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ปิดไฟห้องรับแขกแล้ว";
+  $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3/0');
+}
+
+else if($arrJson['events'][0]['message']['text'] == "เปิดแอร์ห้องนอนใหญ่"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ปิดแอร์ห้องนอนใหญ่แล้ว";
+  $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air1/1');
+}else if($arrJson['events'][0]['message']['text'] == "ปิดแอร์ห้องนอนใหญ่"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ปิดแอร์ห้องนอนใหญ่แล้ว";
+  $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air1/0');
+}
+
+else if($arrJson['events'][0]['message']['text'] == "เปิดแอร์ห้องนอนเล็ก"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ปิดแอร์ห้องนอนเล็กแล้ว";
+  $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air2/1');
+}else if($arrJson['events'][0]['message']['text'] == "ปิดแอร์ห้องนอนเล็ก"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ปิดแอร์ห้องนอนเล็กแล้ว";
+  $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air2/0');
+}
+
+else if($arrJson['events'][0]['message']['text'] == "เปิดแอร์ห้องรับแขก"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ปิดแอร์ห้องรับแขกแล้ว";
+  $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air3/1');
+}else if($arrJson['events'][0]['message']['text'] == "ปิดแอร์ห้องรับแขก"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ปิดแอร์ห้องรับแขกแล้ว";
+  $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air3/0');
+}
+
+else if($arrJson['events'][0]['message']['text'] == "เช็คสถานะไฟฟ้า"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $request1 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1');
@@ -68,18 +140,11 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
   }else{
     $Air3 = "🔴แอร์ห้องรับแขก: ปิดอยู่ \n";
   }
-  $status = $Lamp1.$Lamp2.$Lamp3.$Air1.$Air2.$Air3."💡 สถานะไฟฟ้าทั้งหมด ❄️";
+  $status = $Lamp1.$Lamp2.$Lamp3.$Air1.$Air2.$Air3;
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = $status;
 }
 
-  if($content['events'][0]['message']['text'] == "ปิดไฟห้องนอนใหญ่แล้ว"){
-    $arrPostData = array();
-    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "sticker";
-    $arrPostData['messages'][0]['packageId'] = "1";
-    $arrPostData['messages'][0]['stickerId'] = "1";
-  }
 
 
 $ch = curl_init();
