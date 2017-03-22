@@ -21,7 +21,7 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "sticker";
   $arrPostData['messages'][0]['packageId'] = "1";
-  $arrPostData['messages'][0]['packageId'] = "1";
+  $arrPostData['messages'][0]['stickerId'] = "1";
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/1');
 }else if($arrJson['events'][0]['message']['text'] == "ปิดไฟห้องนอนใหญ่"){
   $arrPostData = array();
