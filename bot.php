@@ -19,8 +19,6 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
 }else if($arrJson['events'][0]['message']['text'] == "เปิดไฟห้องนอนใหญ่"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "เปิดไฟห้องนอนใหญ่แล้ว";
   $arrPostData['messages'][0]['type'] = "sticker";
   $arrPostData['messages'][0]['packageId'] = "1";
   $arrPostData['messages'][0]['stickerId'] = "1";
@@ -48,6 +46,16 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
   	$arrPostData['messages'][0]['text'] = "ไฟห้องนอนใหญ่เปิดอยู่\nไฟห้องรับแขกเปิดอยู่\nไฟห้องรับแขกเปิดอยู่";
   }
 }
+
+  if($arrJson['events'][0]['message']['text'] == "ปิดไฟห้องนอนใหญ่แล้ว"){
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "sticker";
+    $arrPostData['messages'][0]['packageId'] = "1";
+    $arrPostData['messages'][0]['stickerId'] = "1";
+  }
+
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
 curl_setopt($ch, CURLOPT_HEADER, false);
