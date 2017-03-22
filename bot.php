@@ -41,13 +41,13 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
     $Lamp1 = "ไฟห้องนอนใหญ่ปิดอยู่";
   }
   if($request2 == '{"result":"true","value":"1"}'){
-  	$Lamp2 = "ไฟห้องนอนเล็กเปิดอยู่";
+  	$Lamp2 = "เปิดอยู่";
   }else{
-    $Lamp2 = "ไฟห้องนอนเล็กปิดอยู่";
+    $Lamp2 = "ปิดอยู่";
   }
   $status = [$Lamp1,$Lamp2];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = $status;
+  $arrPostData['messages'][0]['text'] = "ไฟห้องนอนเล็ก: ".$Lamp2;
 }
 
   if($content['events'][0]['message']['text'] == "ปิดไฟห้องนอนใหญ่แล้ว"){
