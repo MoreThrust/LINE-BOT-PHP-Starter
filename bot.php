@@ -36,16 +36,16 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
   $request2 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp2');
   $request3 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp3');
   if($request1 == '{"result":"true","value":"1"}'){
-  	$Lamp1 = "ไฟห้องนอนใหญ่เ: ปิดอยู่";
+  	$Lamp1 = "ไฟห้องนอนใหญ่เ: ปิดอยู่\n";
   }else{
-    $Lamp1 = "ไฟห้องนอนใหญ่: ปิดอยู่";
+    $Lamp1 = "ไฟห้องนอนใหญ่: ปิดอยู่\n";
   }
   if($request2 == '{"result":"true","value":"1"}'){
-  	$Lamp2 = "ไฟห้องนอนเล็ก: เปิดอยู่";
+  	$Lamp2 = "ไฟห้องนอนเล็ก: เปิดอยู่\n";
   }else{
-    $Lamp2 = "ไฟห้องนอนเล็ก: ปิดอยู่";
+    $Lamp2 = "ไฟห้องนอนเล็ก: ปิดอยู่\n";
   }
-  $status = "NT".$Lamp1"NT".$Lamp2;
+  $status = $Lamp1.$Lamp2;
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = $status;
 }
