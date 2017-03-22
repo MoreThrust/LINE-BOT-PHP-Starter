@@ -45,7 +45,7 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
   }else{
     $Lamp2 = "ไฟห้องนอนเล็ก: ปิดอยู่";
   }
-  $status = "NT".$Lamp1"\n".$Lamp2;
+  $status = "NT".$Lamp1"NT".$Lamp2;
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = $status;
 }
