@@ -100,13 +100,6 @@ else if($arrJson['events'][0]['message']['text'] == "เปิดแอร์ห
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air3/0');
 }
 
-else if($arrJson['events'][0]['message']['text'] == "􀔃􀄎LINE messenger􏿿"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Hey!!";
-}
-
 else if($arrJson['events'][0]['message']['text'] == "เช็คสถานะไฟฟ้า"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -137,9 +130,9 @@ else if($arrJson['events'][0]['message']['text'] == "เช็คสถานะ
     $Air1 = "􀔃􀇢red circle􏿿แอร์ห้องนอนใหญ่: ปิดอยู่\n";
   }
   if($request5 == '{"result":"true","value":"1"}'){
-  	$Air2 = "􀔃􀇣blue circle􏿿แอร์ห้องนอนเล็ก: เปิดอยู่ \n";
+  	$Air2 = "􀔃􀇣blue circle􏿿แอร์ห้องนอนเล็ก: เปิดอยู่\n";
   }else{
-    $Air2 = "􀔃􀇢red circle􏿿แอร์ห้องนอนเล็ก: ปิดอยู่ \n";
+    $Air2 = "􀔃􀇢red circle􏿿แอร์ห้องนอนเล็ก: ปิดอยู่\n";
   }
   if($request6 == '{"result":"true","value":"1"}'){
   	$Air2 = "􀔃􀇣blue circle􏿿แอร์ห้องรับแขก: เปิดอยู่ \n";
