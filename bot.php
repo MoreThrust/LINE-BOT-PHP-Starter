@@ -19,6 +19,8 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
 }else if($arrJson['events'][0]['message']['text'] == "เปิดไฟห้องนอนใหญ่"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "เปิดไฟห้องนอนใหญ่แล้ว";
   $arrPostData['messages'][0]['type'] = "sticker";
   $arrPostData['messages'][0]['packageId'] = "1";
   $arrPostData['messages'][0]['stickerId'] = "1";
