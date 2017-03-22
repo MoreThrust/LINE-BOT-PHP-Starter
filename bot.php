@@ -111,34 +111,34 @@ else if($arrJson['events'][0]['message']['text'] == "เช็คสถานะ
   $request5 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air2');
   $request6 = file_get_contents('https://api.anto.io/channel/get/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air3');
   if($request1 == '{"result":"true","value":"1"}'){
-  	$Lamp1 = "🔵ไฟห้องนอนใหญ่: เปิดอยู่ \n";
+  	$Lamp1 = "􀔃􀇣blue circle􏿿ไฟห้องนอนใหญ่: เปิดอยู่ \n";
   }else{
-    $Lamp1 = "🔴ไฟห้องนอนใหญ่: ปิดอยู่ \n";
+    $Lamp1 = "􀔃􀇢red circle􏿿ไฟห้องนอนใหญ่: ปิดอยู่ \n";
   }
   if($request2 == '{"result":"true","value":"1"}'){
-  	$Lamp2 = "🔵ไฟห้องนอนเล็ก: เปิดอยู่\n";
+  	$Lamp2 = "􀔃􀇣blue circle􏿿ไฟห้องนอนเล็ก: เปิดอยู่\n";
   }else{
-    $Lamp2 = "🔴ไฟห้องนอนเล็ก: ปิดอยู่ \n";
+    $Lamp2 = "􀔃􀇢red circle􏿿ไฟห้องนอนเล็ก: ปิดอยู่ \n";
   }
   if($request3 == '{"result":"true","value":"1"}'){
   	$Lamp3 = "🔵ไฟห้องรับแขก: เปิดอยู่ \n";
   }else{
-    $Lamp3 = "🔴ไฟห้องรับแขก: ปิดอยู่ \n";
+    $Lamp3 = "􀔃􀇢red circle􏿿ไฟห้องรับแขก: ปิดอยู่ \n";
   }
   if($request4 == '{"result":"true","value":"1"}'){
   	$Air1 = "🔵แอร์ห้องนอนใหญ่: เปิดอยู่\n";
   }else{
-    $Air1 = "🔴แอร์ห้องนอนใหญ่: ปิดอยู่\n";
+    $Air1 = "􀔃􀇢red circle􏿿แอร์ห้องนอนใหญ่: ปิดอยู่\n";
   }
   if($request5 == '{"result":"true","value":"1"}'){
   	$Air2 = "🔵แอร์ห้องนอนเล็ก: เปิดอยู่ \n";
   }else{
-    $Air2 = "🔴แอร์ห้องนอนเล็ก: ปิดอยู่ \n";
+    $Air2 = "􀔃􀇢red circle􏿿แอร์ห้องนอนเล็ก: ปิดอยู่ \n";
   }
   if($request6 == '{"result":"true","value":"1"}'){
   	$Air2 = "🔵แอร์ห้องรับแขก: เปิดอยู่ \n";
   }else{
-    $Air3 = "🔴แอร์ห้องรับแขก: ปิดอยู่ \n";
+    $Air3 = "􀔃􀇢red circle􏿿แอร์ห้องรับแขก: ปิดอยู่ \n";
   }
   $status = $Lamp1.$Lamp2.$Lamp3.$Air1.$Air2.$Air3;
   $arrPostData['messages'][0]['type'] = "text";
