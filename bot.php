@@ -125,17 +125,17 @@ else if($arrJson['events'][0]['message']['text'] == "เช็คสถานะ
     $Lamp3 = "􀔃􀇢red circle􏿿ไฟห้องรับแขก: ปิดอยู่ \n";
   }
   if($request4 == '{"result":"true","value":"1"}'){
-  	$Air1 = "􀔃􀇣blue circle􏿿แอร์ห้องนอนใหญ่: เปิดอยู่\n";
+  	$Air1 = "􀔃􀇣blue circle􏿿แอร์ห้องนอนใหญ่: เปิดอยู่ \n";
   }else{
-    $Air1 = "􀔃􀇢red circle􏿿แอร์ห้องนอนใหญ่: ปิดอยู่\n";
+    $Air1 = "􀔃􀇢red circle􏿿แอร์ห้องนอนใหญ่: ปิดอยู่ \n";
   }
   if($request5 == '{"result":"true","value":"1"}'){
-  	$Air2 = "􀔃􀇣blue circle􏿿แอร์ห้องนอนเล็ก: เปิดอยู่\n";
+  	$Air2 = "􀔃􀇣blue circle􏿿แอร์ห้องนอนเล็ก: เปิดอยู่ \n";
   }else{
-    $Air2 = "􀔃􀇢red circle􏿿แอร์ห้องนอนเล็ก: ปิดอยู่\n";
+    $Air2 = "􀔃􀇢red circle􏿿แอร์ห้องนอนเล็ก: ปิดอยู่ \n";
   }
   if($request6 == '{"result":"true","value":"1"}'){
-  	$Air2 = "􀔃􀇣blue circle􏿿แอร์ห้องรับแขก: เปิดอยู่ \n";
+  	$Air3 = "􀔃􀇣blue circle􏿿แอร์ห้องรับแขก: เปิดอยู่ \n";
   }else{
     $Air3 = "􀔃􀇢red circle􏿿แอร์ห้องรับแขก: ปิดอยู่ \n";
   }
