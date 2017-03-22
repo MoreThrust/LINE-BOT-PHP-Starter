@@ -41,7 +41,7 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
   if($request1 == '{"result":"true","value":"1"}'){
   	$Lamp1 = "ไฟห้องนอนใหญ่: ปิดอยู่\n 0x100078􀀁";
   }else{
-    $Lamp1 = "ไฟห้องนอนใหญ่: ปิดอยู่\n 􀀁".0x100078;
+    $Lamp1 = "ไฟห้องนอนใหญ่: ปิดอยู่\n 􀀁"0x100078;
   }
   if($request2 == '{"result":"true","value":"1"}'){
   	$Lamp2 = "ไฟห้องนอนเล็ก: เปิดอยู่\n";
