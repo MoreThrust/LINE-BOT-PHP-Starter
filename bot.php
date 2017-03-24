@@ -126,7 +126,7 @@ else if($arrJson['events'][0]['message']['text'] == "เปิดแอร์ท
   $request1 = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air1/1');
   $request2 = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air2/1');
   $request3 = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Air3/1');
-}else if($arrJson['events'][0]['message']['text'] == "ปิดไฟทั้งหมด"){
+}else if($arrJson['events'][0]['message']['text'] == "ปิดแอร์ทั้งหมด"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
