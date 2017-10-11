@@ -40,14 +40,14 @@ else if($arrJson['events'][0]['message']['text'] == "ok"){
   $arrPostData['messages'][0]['type'] = "confirm";
   $arrPostData['messages'][0]['text'] = "Are you sure?";
   $arrPostData['messages'][0]['actions'] = [{
-            "type": "message",
-            "label": "Yes",
-            "text": "yes"
+            $arrPostData['messages'][0]['type'] = "message";
+            $arrPostData['messages'][0]['label'] = "Yes";
+            $arrPostData['messages'][0]['text'] = "yes";
           },
           {
-            "type": "message",
-            "label": "No",
-            "text": "no"
+            $arrPostData['messages'][0]['type'] = "message";
+            $arrPostData['messages'][0]['label'] = "No";
+            $arrPostData['messages'][0]['text'] = "no";
           }];
   
  }
