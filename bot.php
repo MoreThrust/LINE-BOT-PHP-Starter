@@ -31,13 +31,13 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
 }
 
 else if ($event['message']['text'] == "ok") {
-        	$replyToken = $event['replyToken'];
-			$messages = ["type" => "confirm","text" => "Are you sure?","actions" => '[{"type": "message","label": "Yes","text": "yes"},{"type": "message","label": "No","text": "no"}]'];
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-		}
+$replyToken = $event['replyToken'];
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "confirm";
+  $arrPostData['messages'][0]['text'] = "Are you sure?";
+  $arrPostData['messages'][0]['actions'] = "[{'type': 'message','label': 'Yes','text': 'yes'},{'type': 'message','label': 'No','text': 'no'}]";
+}
 
 else if($arrJson['events'][0]['message']['text'] == "เปิดไฟห้องนอนเล็ก"){
   $arrPostData = array();
