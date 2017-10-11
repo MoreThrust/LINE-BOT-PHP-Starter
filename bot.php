@@ -22,7 +22,7 @@ if (!is_null($events['events'])) {
           'template' => {
               'type' => 'confirm',
               'text' => 'Are you sure?',
-              'actions': [
+              'actions' => [
                   {
                     'type': 'message',
                     'label': 'Yes',
