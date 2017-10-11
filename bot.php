@@ -19,7 +19,7 @@ if (!is_null($events['events'])) {
         
           
     "type" => "text",
-    "text" => "Hello, world"
+    "text" => "\uDBC0\uDC84 LINE emoji"
 
         
 
