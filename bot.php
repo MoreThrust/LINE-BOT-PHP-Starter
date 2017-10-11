@@ -10,7 +10,7 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
- 
+
 if($arrJson['events'][0]['message']['text'] == "hi"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -29,6 +29,15 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
   $arrPostData['messages'][0]['text'] = "ปิดไฟห้องนอนใหญ่แล้ว 􀄃􀆏moon wink􏿿";
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/0');
 }
+
+else if ($event['message']['text'] == "ok") {
+        	$replyToken = $event['replyToken'];
+			$messages = ["type" => "confirm","text" => "Are you sure?","actions" => '[{"type": "message","label": "Yes","text": "yes"},{"type": "message","label": "No","text": "no"}]'];
+			$url = 'https://api.line.me/v2/bot/message/reply';
+			$data = ['replyToken' => $replyToken,'messages' => [$messages],];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+		}
 
 else if($arrJson['events'][0]['message']['text'] == "เปิดไฟห้องนอนเล็ก"){
   $arrPostData = array();
