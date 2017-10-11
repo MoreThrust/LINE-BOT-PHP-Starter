@@ -18,8 +18,9 @@ if (!is_null($events['events'])) {
       $messages = [
         
           
-    "type" => "text",
-    "text" => "\uDBC0\uDC84 LINE emoji"
+   "type" => "image",
+    "originalContentUrl" => "https://example.com/original.jpg",
+    "previewImageUrl" => "https://example.com/preview.jpg"
 
         
 
