@@ -18,9 +18,24 @@ if (!is_null($events['events'])) {
       $messages = [
         
           
-   "type" => "image",
-    "originalContentUrl" => "https://example.com/original.jpg",
-    "previewImageUrl" => "https://example.com/preview.jpg"
+   "type" => "template",
+  "altText" => "this is a confirm template",
+  "template" => {
+      "type" => "confirm",
+      "text" => "Are you sure?",
+      "actions" => [
+          {
+            "type": "message",
+            "label": "Yes",
+            "text": "yes"
+          },
+          {
+            "type": "message",
+            "label": "No",
+            "text": "no"
+          }
+      ]
+  }
 
         
 
