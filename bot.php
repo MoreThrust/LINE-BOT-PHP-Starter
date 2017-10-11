@@ -30,29 +30,6 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/0');
 }
 
-else if($arrJson['events'][0]['message']['text'] == "ok"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "template";
-  $arrPostData['messages'][0]['altText'] = "this is a confirm template";
- $arrPostData['messages'][0]['template'] = 
- {
-  $arrPostData['messages'][0]['type'] = "confirm";
-  $arrPostData['messages'][0]['text'] = "Are you sure?";
-  $arrPostData['messages'][0]['actions'] = [{
-            $arrPostData['messages'][0]['type'] = "message";
-            $arrPostData['messages'][0]['label'] = "Yes";
-            $arrPostData['messages'][0]['text'] = "yes";
-          },
-          {
-            $arrPostData['messages'][0]['type'] = "message";
-            $arrPostData['messages'][0]['label'] = "No";
-            $arrPostData['messages'][0]['text'] = "no";
-          }];
-  
- }
-}
-
 else if($arrJson['events'][0]['message']['text'] == "เปิดไฟห้องนอนเล็ก"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
