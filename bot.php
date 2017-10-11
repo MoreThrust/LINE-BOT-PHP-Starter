@@ -30,8 +30,7 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
   $request = file_get_contents('https://api.anto.io/channel/set/OSZ8RPcqVh2G78Ua2xkqzSnyjrzc0Yp8xFkxHMif/Smart_Home/Lamp1/0');
 }
 
-else if ($event['message']['text'] == "ok") {
-$replyToken = $event['replyToken'];
+else if($arrJson['events'][0]['message']['text'] == "ok"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
