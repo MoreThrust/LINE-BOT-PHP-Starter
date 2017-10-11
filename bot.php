@@ -36,7 +36,6 @@ $replyToken = $event['replyToken'];
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "confirm";
   $arrPostData['messages'][0]['text'] = "Are you sure?";
-  $arrPostData['messages'][0]['actions'] = "[{'type': 'message','label': 'Yes','text': 'yes'},{'type': 'message','label': 'No','text': 'no'}]";
 }
 
 else if($arrJson['events'][0]['message']['text'] == "เปิดไฟห้องนอนเล็ก"){
